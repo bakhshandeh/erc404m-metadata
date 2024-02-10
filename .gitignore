@@ -1,0 +1,7 @@
+.idea
+website/assets/js/blockchain-bundle.js
+ips
+node_modules
+pubkey
+.env
+build/
