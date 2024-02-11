@@ -24,9 +24,13 @@ app.use(express.static("static"));
 app.get("/:type/:id", async function(req, res) {
   var type = req.params.type;
   var id =  req.params.id;
-  var data = {"name": "ERC404m #1","description":"Name: Multichain ERC404 by muon",
-  "external_url":"https://erc404.muon.net",
-  "animation_url":`https://erc404-metadata.muon.net/arts/${type}.mp4`,"attributes":[{"trait_type":"Type","value": `${type}`}]}
+  var data = {
+    "name": `ERC404m #${id}`,
+    "description": "Name: Multichain ERC404 by muon",
+    "external_url": "https://erc404.muon.net",
+    "animation_url": `https://erc404-metadata.muon.net/arts/${type}.mp4`,
+    "attributes": [{"trait_type":"Type","value": `${type}`}]
+  }
   res.send(data);
 });
 
