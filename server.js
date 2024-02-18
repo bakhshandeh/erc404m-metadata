@@ -31,7 +31,8 @@ app.get("/:type/:id", async function(req, res) {
     "name": `ERC404m #${id}`,
     "description": "Name: Multichain ERC404 by muon",
     "external_url": "https://erc404.muon.net",
-    "animation_url": `https://erc404-metadata.muon.net/arts/${type}.mp4`,
+    //"animation_url": `https://erc404-metadata.muon.net/arts/${type}.mp4`,
+    "image": `https://erc404-metadata.muon.net/arts/${type}.gif`,
     "attributes": [{"trait_type":"Type","value": `${type}`}]
   }
   res.send(data);
